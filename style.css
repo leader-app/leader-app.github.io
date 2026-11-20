@@ -15,7 +15,8 @@ a{color:var(--gold)}img{max-width:100%}
 .bar nav a:hover{background:#ffffff1c}.bar nav a.on{background:var(--gold);color:#2a1700}
 /* type */
 h1,h2,h3{font-family:"Arial Rounded MT Bold","Avenir Next",ui-rounded,"Trebuchet MS",system-ui,sans-serif;font-weight:900;line-height:1.1;margin:0}
-.gold{color:var(--gold);-webkit-text-stroke:2px #3a1600;paint-order:stroke fill;text-shadow:0 4px 0 #b3560f,0 10px 24px #0007}
+.gold{position:relative;color:#1c0d06;-webkit-text-stroke:.15em #1c0d06;paint-order:stroke fill;text-shadow:0 .04em #6b2f05,0 .08em #6b2f05,0 .12em #4d2004,0 .2em .22em #0008}
+.gold:after{content:attr(data-text);position:absolute;inset:0;text-align:inherit;-webkit-text-stroke:0;text-shadow:none;background:linear-gradient(180deg,#fff7b0 0%,#ffd633 38%,#ffb116 62%,#f07d00 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 h2.sec{font-size:clamp(1.9rem,4.5vw,2.8rem);text-align:center;margin:0 0 8px}
 .sub{text-align:center;color:var(--mut);max-width:620px;margin:0 auto 34px}
 section{padding:62px 0}
