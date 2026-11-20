@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Download | LEADER</title><meta name="description" content="LEADER: The Political Journey, a fictional single-player political career game for Android.">
+<link rel="stylesheet" href="style.css"></head><body>
+<header><nav><b>LEADER</b><a href="index.html">Home</a><a href="features.html">Features</a><a href="download.html" class=on>Download</a><a href="privacy.html">Privacy Policy</a><a href="contact.html">Contact</a></nav></header>
+<main>
+<h1>Download LEADER for Android</h1>
+<p>Get the latest version as an APK file. Free, with no ads, no account and no tracking.</p>
+<p><a id="dl" class="btn" href="https://github.com/leader-app/leader-app.github.io/releases/latest/download/LEADER.apk">Download the APK</a></p>
+<p id="meta">Always the newest release.</p>
+<h2>How to install</h2>
+<ol>
+<li>Open this page on your Android phone (Android 7.0 or newer) and tap <b>Download the APK</b>.</li>
+<li>Open the downloaded file. If Android asks, allow installs from your browser or file manager, just this once.</li>
+<li>Tap <b>Install</b>, then open <b>Leader</b>.</li>
+</ol>
+<p class="note">Your saved games stay on your phone. To update, download the newest APK and install it over the old one.</p>
+<h2>Check the file (optional)</h2>
+<p>Each release also has a <code>.sha256</code> file. Compare it with the downloaded APK's checksum on the <a href="https://github.com/leader-app/leader-app.github.io/releases">releases page</a>, where older versions are kept too.</p>
+<script>
+fetch('https://api.github.com/repos/leader-app/leader-app.github.io/releases/latest').then(function(r){return r.ok?r.json():null}).then(function(j){
+  if(!j)return;var a=(j.assets||[]).filter(function(x){return x.name==='LEADER.apk'})[0];
+  var d=new Date(j.published_at).toLocaleDateString();
+  document.getElementById('meta').textContent='Latest version: '+j.tag_name+' ('+d+')'+(a?', '+(a.size/1048576).toFixed(0)+' MB':'');
+  if(a)document.getElementById('dl').href=a.browser_download_url;
+}).catch(function(){});
+</script>
+</main>
+<footer>LEADER: The Political Journey &middot; A work of fiction by Blacktree Soft &middot; <a href="contact.html">Contact</a></footer>
+</body></html>
