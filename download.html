@@ -28,7 +28,7 @@ fetch('https://api.github.com/repos/leader-app/leader-app.github.io/releases/lat
   if(a)document.getElementById('dl').href=a.browser_download_url;
 }).catch(function(){});
 </script>
-<footer><div class="made"><video src="video/blacktree.mp4" controls preload="none" playsinline></video></div>
+<footer><div class="made"><video src="video/blacktree.mp4" muted loop controls preload="none" playsinline></video></div>
 <div class="links"><a href="index.html">Home</a><a href="features.html">Features</a><a href="download.html">Download</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div>
 Leader &middot; The Political Journey &middot; A work of fiction by Blacktree Soft. All parties, people and symbols are invented.<br>For players aged 18 and over.</footer>
 
@@ -36,6 +36,7 @@ Leader &middot; The Political Journey &middot; A work of fiction by Blacktree So
 (function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.15});
 document.querySelectorAll('.rv,.stats').forEach(function(n){io.observe(n)});
 setTimeout(function(){document.querySelectorAll('.rv,.stats').forEach(function(n){var r=n.getBoundingClientRect();if(r.top<innerHeight*1.2)n.classList.add('on')})},1200);
+var f=document.querySelector('.made video');if(f){f.muted=true;new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){f.play().catch(function(){})}else{f.pause()}})},{threshold:.3}).observe(f)}
 var v=document.querySelector('.phone video');if(v){v.play&&v.play().catch(function(){})}})();
 </script>
 </body></html>
